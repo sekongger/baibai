@@ -1,0 +1,35 @@
+<view class="nav" style="background-image: url('../../images/Copy@1x.png');">
+  <view class="title">待办事项</view>
+  <view class="hutittle">完成胜于完美</view>
+  <view class="type">事项类型：
+  <picker range="{{type}}" bindchange="type">
+    <input type="text" disabled="true" placeholder="{{type[typeIndex]}}" />
+  </picker>
+  </view>
+  <view class="time">完成日期：
+    <picker mode="date" bindchange="seleDate">
+      <input type="text" disabled="true" placeholder="{{date==null?'请选择':date}}" name="" id="" />
+    </picker>
+  </view>
+  <view class="time">完成时间：
+    <picker mode="time" bindchange="seleTime">
+      <input type="text" disabled="true" placeholder="{{time==null?'请选择':time}}" name="" id="" />
+    </picker>
+  </view>
+  <view class="yuyinWrap">
+  <textarea class='yuyinCon' placeholder='请输入内容' value='{{text}}'></textarea>
+  <!--  -->
+  <view class=''>
+    <button class="yuyinBtn {{recordState == true ? 'yuyinBtnBg':''}}" bindtouchstart="touchStart" bindtouchend="touchEnd">
+      <text wx:if="{{recordState == false}}">按住 说话</text>
+      <text wx:else>松开 结束</text>
+    </button>
+  </view>
+  <!-- 开始语音 弹出语音图标表示正在录音 -->
+  <cover-view class="startYuyinImage" wx:if="{{recordState == true}}">
+    <cover-image src="../resource/image/yuyin-min.png"></cover-image>
+    <cover-view>开始语音</cover-view>
+  </cover-view>
+  <view class="button" bindtap="submit">提交</view>
+</view>
+</view>

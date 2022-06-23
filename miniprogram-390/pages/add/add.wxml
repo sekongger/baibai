@@ -1,0 +1,12 @@
+<view class="nav">
+  <view class="title t1">恭喜你</view>
+  <view class="title t2">成功加入拒绝摆烂大家庭</view>
+  <view class="title t3">书中自有黄金屋</view>
+  <view class="title t3">书中自有颜如玉</view>
+  <view class="title t2">读书是获取知识最好的方式</view>
+  <view class="title t4">加油</view>
+  <view class="buttom_image">
+    <image src="../../images/@1x.png"></image>
+  </view>
+  <view class="button" bindtap="toNeed">查看要事</view>
+</view>

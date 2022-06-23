@@ -1,0 +1,18 @@
+<view class="nav" bindtap="toLogin">
+
+  <view class="text">
+    <text>
+      在
+      舒
+      适
+      中
+      更
+      自
+      由
+    </text>
+
+  </view>
+  <view class="nav_back">
+    <image mode="widthFix" src="../../images/ria.png"></image>
+  </view>
+</view>

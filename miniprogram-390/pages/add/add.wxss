@@ -1,0 +1,52 @@
+.title {
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #030303;
+  margin: 5px auto;
+}
+
+.t1 {
+  font-size: 28px;
+}
+
+.t2 {
+  font-size: 20px;
+}
+
+.t3 {
+  font-size: 14px;
+}
+
+.t4 {
+  font-size: 36px;
+}
+
+.buttom_image {
+  margin-top: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttom_image image {
+  width: 288px;
+  height: 237px;
+}
+
+.button {
+  position: fixed;
+  left: 44px;
+  top: 558px;
+  width: 288px;
+  height: 44px;
+  border-radius: 40px;
+  background-color: rgba(116, 104, 190, 100);
+  color: rgba(255, 255, 255, 95);
+  font-size: 18px;
+  text-align: center;
+  line-height: 44px;
+  box-shadow: 0px 2px 6px 0px rgba(116, 104, 190, 39);
+  font-family: PingFang SC;
+}

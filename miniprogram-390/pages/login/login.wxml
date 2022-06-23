@@ -1,0 +1,8 @@
+<view class="nav">
+<view class="avatar">
+<image mode="widthFix" wx:if="{{userInfo==null}}" src="../../images/fas fa-user-circle@1x.png"></image> 
+
+<image mode="widthFix" style="border-radius: 50%;" wx:else src="{{userInfo.avatarUrl}}"></image>
+</view>
+<view class="button" bindtap="login">授权登陆</view>
+</view>

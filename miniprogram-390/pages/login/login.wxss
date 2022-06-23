@@ -1,0 +1,33 @@
+.nav {
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  margin-top: 202px;
+  width: 101px;
+  height: 101px;
+}
+
+.avatar image {
+  width: 100%;
+}
+
+.button {
+  left: 43px;
+  margin-top: 125px;
+  width: 288px;
+  height: 39px;
+  border-radius: 40px;
+  background-color: rgba(116, 104, 190, 100);
+  color: rgba(255, 255, 255, 95);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0px 2px 6px 0px rgba(116, 104, 190, 39);
+  font-family: PingFang SC;
+}

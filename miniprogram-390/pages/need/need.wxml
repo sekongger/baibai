@@ -1,0 +1,50 @@
+<view class="nav" hidden='{{show}}'>
+  <view class="title">重要的事情</view>
+  <view >
+    <view class="top_week">
+      <view class="week_item" wx:for="{{arr}}">{{item}}</view>
+    </view>
+    <view class="top_date">
+      <view class="date_item {{dateIndex==index?'date_on':''}}" data-index="{{index}}" bindtap="seleDate" wx:for="{{date}}">{{item}}</view>
+    </view>
+  </view>
+  <view class="body">
+    <view class="body_title">聚焦要事</view>
+    <view class="body_cont" wx:for="{{list}}">
+      <view class="body_item">
+        <view class="item_it">
+          <view wx:if="{{false}}" class="it_left"></view>
+          <image wx:if="{{item.status==0}}" class="it_image" data-index="{{index}}" bindtap="start" mode="widthFix" src="../../images/ze-play-circle-o@1x.png"></image>
+          <image wx:if="{{item.status==1}}" class="it_image" data-index="{{index}}" bindtap="stop" mode="widthFix" src="../../images/stop.png"></image>
+          <image wx:if="{{item.status==2}}" class="it_image" data-index="{{index}}" mode="widthFix" src="../../images/antFill-check-circle@1x.png"></image>
+          <view class="it_date">{{item.time}}</view>
+          <view class="it_content">{{item.text}}</view>
+          <view class="it_content_right">{{item.type}}</view>
+          <view class="it_content_right" wx:if="{{item.status==2}}">{{item.stop}}完成</view>
+        </view>
+        <view class="border" wx:if="{{list.length-1!=index}}"></view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class="bottom">
+  <image mode="widthFix" bindtap="toAdd" src="../../images/antOutline-plus@1x.png"></image>
+  </view>
+</view>
+<view class="head-bg" hidden='{{!show}}' style="height:{{clockHeight}}rpx">
+
+<view class="progress">
+<canvas canvas-id="progress_bg" class="progress_bg"></canvas>
+<canvas canvas-id="progress_active" class="progress_active"></canvas>
+<view class='progress_text'>{{timestr}}</view>
+</view>
+<view class="btns">
+<view class="okbtn" bindtap="ok" wx:if="{{ok}}">完成</view>
+<view class="pbtn" bindtap="pause" wx:if="{{p}}">暂停</view>
+<view class="corc" wx:if="{{coc}}">
+<view class="ctbtn" bindtap="continue">继续</view>
+<view class="cabtn" bindtap="cancle">放弃</view>
+</view>
+</view>
+</view>
